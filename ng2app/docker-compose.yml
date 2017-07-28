@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: ./.docker/angular-seed.development.dockerfile
     command: npm start
-    container_name: angular-seed-start
+    container_name: my-weather-app
     image: angular-seed
     volumes:
       - .:/home/app/angular-seed
