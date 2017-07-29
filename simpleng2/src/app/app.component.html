@@ -1,9 +1,9 @@
-
 <md-card>
-  <md-list>
-    <h2>Average Weather of the Past Week (degrees Celcius)</h2>
+  <md-card-title>Average Weather of the Past Week (degrees Celcius)</md-card-title>
+  <img md-card-avatar src="https://icons.wxug.com/i/c/v4/partlycloudy.svg">
+  <md-card-content><md-list>
     <md-card *ngFor="let data of weatherData"> {{data.date}} : {{data.avgtemp_c}} C</md-card>
 
-  </md-list>
+  </md-list></md-card-content>
 </md-card>
 
