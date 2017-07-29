@@ -12,20 +12,17 @@ export class AppComponent implements OnInit{
   title = 'app works!';
 
   weatherData:any[] = [];
-  constructor(private weatherService: WeatherService){
 
-  }
-
+  constructor(private weatherService: WeatherService){}
+  
   ngOnInit(){
 
     let today = new Date();
-    let sevenDaysAgo = new Date();
-    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
     let weatherObsArr:any[] = [1,2,3,4,5,6,7]
       .map(i => {
         let d = new Date();
-        return d.setDate(sevenDaysAgo.getDate() - i);
+        return d.setDate(today.getDate() - i);
       })
       .map((date:any) => {
         return this.weatherService.getWeatherOfDate(new Date(date));

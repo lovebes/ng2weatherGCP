@@ -1,5 +1,9 @@
-<h1>
-  {{title}}
-</h1>
 
-{{ weatherData | json }}
+<md-card>
+  <md-list>
+    <h2>Average Weather of the Past Week (degrees Celcius)</h2>
+    <md-card *ngFor="let data of weatherData"> {{data.date}} : {{data.avgtemp_c}} C</md-card>
+
+  </md-list>
+</md-card>
+
