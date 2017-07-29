@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
   weatherData:any[] = [];
 
   constructor(private weatherService: WeatherService){}
-  
+
   ngOnInit(){
 
     let today = new Date();
